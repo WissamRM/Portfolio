@@ -8,6 +8,7 @@
     <title>Portfolio website</title>
 
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -37,7 +38,19 @@
             <h4>Hi, my name is</h2>
                 <h1>Wissam Machharah</h1>
                 <h3>I'm a Software Engineer</h3>
-                <a href="#" class="btn">Get In Touch</a>
+                <a href="#" class="btn" onclick="openPopup()">Get In Touch</a>
+                <div class="popup" id="popup">
+                    <div class="social">
+                        <a href="https://www.facebook.com/wissam.machharah/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/WissamRM" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/wissam_radwan/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/wissam-machharah/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
         </div>
     </div>
 
@@ -45,7 +58,7 @@
     <section class="about" id="AboutMe">
         <div class="main">
             <img src="img/IMG-20201112-WA0014.jpg" alt="profile">
-            <div class="about-text" >
+            <div class="about-text">
                 <h2>About Me</h2>
                 <h5>Developer & <span class="span2">Designer</span></h5>
                 <p>I am an ambitious web developer brings enthusiasm and a detailed understanding of various programming
@@ -84,10 +97,10 @@
                 <i class="fa-solid fa-user"></i>
                 <h5>Sales Executive</h5>
                 <div class="pra">
-                    <p>Every website should be built with two primary goals:
+                    <p>"Success in sales is about building relationships, not just making transactions."
                         <ul>
-                            <li>Work across all devices</li>
-                            <li>Needs to be as fast as possible</li>
+                            <li>Established sales goals</li>
+                            <li>Collaborated with buyers and suppliers to negotiate favorable pricing</li>
                         </ul>
                     </p>
                     <p style="text-align: center;">
@@ -98,12 +111,12 @@
 
             <div class="card">
                 <i class="fa-solid fa-bell"></i>
-                <h5>Software Development</h5>
+                <h5>Event Zone Manager</h5>
                 <div class="pra">
-                    <p>Every website should be built with two primary goals:
+                    <p>"Creating unforgettable events, one moment at a time."
                         <ul>
-                            <li>Work across all devices</li>
-                            <li>Needs to be as fast as possible</li>
+                            <li>Provide customer service</li>
+                            <li>Maintained area of responsibility in accordance</li>
                         </ul>
                     </p>
                     <p style="text-align: center;">
@@ -128,10 +141,12 @@
             <a href="https://www.facebook.com/wissam.machharah/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://github.com/WissamRM" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.instagram.com/wissam_radwan/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/wissam-machharah/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/wissam-machharah/" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
         </div>
         <p class="end">Copyright by Wissam Machharah</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
