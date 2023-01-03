@@ -257,6 +257,13 @@ h5 {
 }
 
 .card .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #f9004d;
     color: white;
     text-decoration: none;
