@@ -195,6 +195,24 @@ button:hover {
     cursor: pointer;
 }
 
+.button {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    transition: .4s;
+    cursor: pointer;
+}
+
 .service {
     background: #101010;
     width: 100%;
