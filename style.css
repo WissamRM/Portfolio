@@ -5,6 +5,18 @@
     font-family: 'josefin sans', sans-serif;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+}
+
 .hero {
     height: 100vh;
     width: 100%;
@@ -12,13 +24,53 @@
     background-size: cover;
 }
 
-nav {
+.nav {
+    height: 50px;
+    width: 100%;
+    /* background-color: #4d4d4d; */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 45px;
+    font-size: 18px;
     padding-left: 8%;
-    padding-right: 33%;
+    padding-right: 35%;
+    padding-top: 45px;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
 }
 
 .logo {
@@ -34,19 +86,6 @@ span {
 
 .span2 {
     color: red;
-}
-
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 25px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-weight: bold;
 }
 
 .popup {
@@ -167,6 +206,7 @@ h4 {
     font-size: 22px;
     margin-bottom: 25px;
     text-transform: capitalize;
+
 }
 
 .about-text p {
@@ -387,4 +427,156 @@ footer p:nth-child(2) {
     color: #f9004d;
     bottom: 35px;
     font-size: 14px;
+}
+
+
+@media (max-width:883px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #101010;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(25vh - 50px);
+        overflow-y: auto;
+    }
+
+    .content>h1 {
+        font-size: 50px;
+    }
+
+    .content>h3 {
+        font-size: 20px;
+    }
+
+    .content>#popup {
+        left: 40%;
+    }
+
+    /* About Section Start*/
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about>.main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .about>.main>.about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .about>.main>img {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .about>.main>h2 {
+        order: 1;
+        font-size: 20px;
+    }
+
+    .about>.main>h5 {
+        order: 3;
+        font-size: 16px;
+    }
+
+    .about>.main>.about-text>p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .about>.main>.button {
+        order: 5;
+        justify-content: center;
+        display: flex;
+    }
+
+    /* End of About Section */
+
+    /* Service Section Start */
+    .service>.title>h2 {
+        font-size: 30px;
+    }
+
+    .title h2 {
+        width: auto;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* End of Service Section */
+
+    /* Start of My Resume Section */
+    .contact-me p {
+        text-align: center;
+    }
+
+    /* End of My Resume Section */
+
+    /* Start of Footer Section */
+    footer p:nth-child(2) {
+        width: auto;
+    }
+
 }

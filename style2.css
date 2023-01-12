@@ -5,6 +5,14 @@
     font-family: 'josefin sans', sans-serif;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .container {
     background: #191919;
     width: 100%;
@@ -45,11 +53,12 @@
 }
 
 .main {
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
     margin-left: 5%;
+
 }
 
 /* main-left and main-right */
@@ -59,7 +68,10 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    font-size: 16px;
+    margin-right: 20px;
 }
+
 
 .info {
     display: flex;
@@ -78,13 +90,14 @@
 
 .main-left h2 {
     font-size: 18px;
+    word-wrap: break-word;
+    width: auto;
 }
 
-/* .main-left h2 {
-    margin-left: 20px;
-    font-size: 18px;
-} */
-
+.certificate {
+    width: auto;
+    word-wrap: break-word;
+}
 
 .main-right {
     float: left;
@@ -105,10 +118,11 @@
 }
 
 
-.main-right li {
-    font-size: 18px;
+.main>.main-right>li {
+    font-size: 20px;
     margin-bottom: 5px;
     margin-left: 20px;
+    word-wrap: break-word;
 }
 
 .main-right h1 {
@@ -244,32 +258,8 @@ footer p {
     font-size: 14px;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-    .main {
-        flex-direction: column;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Reordering Divs */
-    .main>.main-left {
-        order: 2;
-    }
-
-    .main>.main-right {
-        order: 1;
-    }
-}
-
-.main-left {
-    width: 100%;
-    font-size: 16px;
-}
-
 .main-right {
-    width: 100%;
+    width: auto;
 }
 
 .main-right ul {
@@ -281,9 +271,10 @@ footer p {
 }
 
 .main-right li {
-    font-size: 16px;
+    font-size: 20px;
 }
-.main-right h2{
+
+.main-right h2 {
     font-size: 22.5px;
 }
 
@@ -324,4 +315,47 @@ footer p {
 .end {
     bottom: 20px;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+
+    .main {
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    /* Reordering Divs */
+    .main>.main-left {
+        order: 2;
+        width: auto;
+        margin-left: 0;
+    }
+
+    .main>.main-right {
+        order: 1;
+        /* margin-left: 5%; */
+        margin-right: 20px;
+    }
+
+    footer p:nth-child(2) {
+        width: auto;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .all {
+        text-align: center;
+        justify-content: center;
+
+    }
+}
+
+@media only screen and (max-width:302px) {
+    .container>.header>.header-right>h1 {
+        text-align: center;
+    }
 }
